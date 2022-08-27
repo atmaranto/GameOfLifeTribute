@@ -1,14 +1,4 @@
-# GameOfLifeTribute
- Like many others, I created a small tribute to the death of John Conway by implementing Conway's Game of Life twice: once in html/css/JS and once in Love2D.
-
- For the Love2D Desktop version, space pauses/unpauses, and scrolling increases/decreases simulation speed. The world wraps around, which is actually fairly
- unusual for a Game of Life, but these were just meant to be small tributes and not extensive projects, so I was just happy that I got the rulesets working.
- 
- The font used in the Desktop version, which is Comic Neue found in `comic.ttf`, is licensed under the Open Font License (found in `OFL.txt`).
- 
- The other files in this project are licensed under the MIT license, which I have included below:
- 
-# MIT License
+--[[
 
 MIT License
 
@@ -31,3 +21,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+]]--
+
+function love.conf(t)
+	t.identity = "Life"
+	
+	t.window.title = "Conway's Game of Life"
+	t.window.height = 600
+	t.window.width = 600
+	
+	t.console = true
+end
